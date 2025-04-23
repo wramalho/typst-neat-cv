@@ -24,17 +24,20 @@
 
 
 /* Styling */
-#let headerFont = ("Source Sans Pro", "Symbols Nerd Font")
-#let textFont = ("Source Sans Pro", "Symbols Nerd Font")
+#let headerFont = ("Atkinson Hyperlegible Next", "Symbols Nerd Font")
+#let textFont = ("Atkinson Hyperlegible Next", "Symbols Nerd Font")
 
 #let textColors = (
     lightGray: rgb("#ededef"),
     mediumGray: rgb("#78787e"),
     darkGray: rgb("#3c3c42"),
+    gold: r),
 )
 
 #let accentColors = (
     burgundy: rgb("#800020"),
+    aqua: rgb("#548c9c"),
+    wizardry: rgb("#4d259c"),
 )
 
 #let chosenAccentColor = {
@@ -46,26 +49,26 @@
 }
 
 #let divider() = align(center,
-    line(length: 95%, stroke: (paint: textColors.mediumGray, dash: "dashed"))
+    line(length: 95%, stroke: (paint: textColors.lightGray, dash: "dashed"))
 )
 
 #let headerFirstNameStyle(str) = {text(
     font: headerFont,
-    size: 28pt,
+    size: 32pt,
     weight: "light",
     str
 )}
 
 #let headerLastNameStyle(str) = {text(
     font: headerFont,
-    size: 28pt,
-    weight: "bold",
+    size: 32pt,
+    weight: "extrabold",
     str
 )}
 
 #let headerInfoStyle(str) = {text(
     font: headerFont,
-    size: 9pt,
+    size: 11pt,
     str
 )}
 
@@ -78,42 +81,43 @@
 )}
 
 #let sectionTitleStyle(str, color:black) = {text(
-    size: 16pt, 
+    size: 18pt, 
     weight: "bold", 
     fill: color,
     str
 )}
 
 #let entryA1Style(str) = {text(
-    size: 12pt,
+    size: 13pt,
     weight: "bold",
     str
 )}
 
 #let entryA2Style(str) = {align(right, text(
-    weight: "medium",
-    fill: chosenAccentColor,
+    weight: "bold",
+    size: 11pt,
+    fill: textColors.mediumGray,
     style: "oblique",
     str
 ))}
 
 #let entryB1Style(str) = {text(
-    size: 11pt,
+    size: 12pt,
     fill: chosenAccentColor,
     weight: "medium",
     smallcaps(str)
 )}
 
 #let entryB2Style(str) = {align(right, text(
-    size: 11pt,
-    weight: "medium",
+    size: 10pt,
+    weight: "light",
     fill: textColors.mediumGray,
     style: "oblique",
     str
 ))}
 
 #let skillTypeStyle(str) = {text(
-    size: 12pt,
+    size: 14pt,
     weight: "bold",
     str
 )}
@@ -135,8 +139,10 @@
 
 #let tagStyle(str) = {align(center, text(
     size: 11pt,
+    
     weight: "regular",
     str
+    
 ))}
 
 #let tagListStyle(tags) = {for tag in tags {
@@ -186,6 +192,7 @@
         email: "󰇮",
         homepage: "󰖟",
         github: "󰊤",
+        linkedin: "󰖟",
         gitlab: "󰮠",
         location: "󰍎",
         extraInfo: "",
@@ -236,10 +243,10 @@
     )
 
     let makeHeaderPhotoSection() = {
-        if profilePhoto != "" {
-            image(profilePhoto, height: 3.6cm)
+        if profilePhoto == true {
+            image(profilePhoto, height: 3.3cm)
         } else {
-            v(3.6cm)
+           v(3.6cm)
         }
     } 
 
@@ -247,16 +254,17 @@
         columns: columns,
         inset: 0pt,
         stroke: none,
-        column-gutter: 15pt,
+        column-gutter: 5pt,
         align: align + horizon,
-        {leftComp},
-        {rightComp}
+        {rightComp},
+        {leftComp}
+        
     )
 
     if hasPhoto {
-        makeHeader(makeHeaderNameSection(), makeHeaderPhotoSection(), (auto, 20%), align)
+        makeHeader(makeHeaderNameSection(), makeHeaderPhotoSection(), (auto, auto), align)
     } else {
-        makeHeader(makeHeaderNameSection(), makeHeaderPhotoSection(), (auto, 0%), align)
+        makeHeader(makeHeaderNameSection(), makeHeaderPhotoSection(), (auto, auto), align)
     }
 }
 
@@ -315,12 +323,34 @@
 #let cvSkill(
     type: "Type",
     tags: (),
+ 
 ) = {
+     set par(
+        leading: 0.85em,
+    )
     skillTypeStyle(type)
     v(-1mm)
     tagListStyle(tags)
+  
 }
 
+#let cvText(
+    type: "Type",
+    tags: (),
+ 
+) = {
+   
+ set par(
+        leading: 0.6em,
+        linebreaks: auto,
+  
+      )
+    skillTypeStyle(type)
+    v(-1mm)
+    tagListStyle(tags)
+  
+}
+ 
 #let cvLanguage(
     name: "Name",
     info: "Info",
@@ -380,7 +410,7 @@
     set text(
         font: textFont,
         weight: "regular",
-        size: 11pt,
+        size: 12pt,
     )
     set par(
         leading: 0.75em,
@@ -391,7 +421,7 @@
         margin: (
             left: 1.2cm,
             right: 1.2cm,
-            top: .6cm,
+            top: 1cm,
             bottom: 1.2cm,
         ),
     )

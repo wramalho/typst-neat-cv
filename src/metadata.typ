@@ -1,27 +1,28 @@
 /* Personal information */
-#let firstName = "John"
-#let lastName = "Doe"
+#let firstName = "Waldo Almeida"
+#let lastName = "Ramalho"
 
 #let personalInfo = (
-    phone: "+33 1 23 45 67 89",
-    email: "john.doe@me.xyz",
-    github: "JohnDoe42",
-    homepage: "mywebsite.xyz",
-    location: "France",
+    phone: "tel: +55 (21) 98339-0890",
+    email: "e-mail: ramalho@waldo.com.br",
+    github: "github: wramalho",
+    linkedin: "linkedin: wramalho",
+   // homepage: "mywebsite.xyz",
+    location: "Pernambuco, Brasil",
     //extraInfo: "",
 )
 
 #let headerQuoteInternational = (
-    "": [Senior Software Engineer looking for a full time job],
+    "": [Pesquisador], 
+    "pt": [Dados, Sociologia Computacional e Infraestruturas sociotécnicas], 
     "en": [Senior Software Engineer looking for a full time job],
-    "fr": [Ingénieur logiciel expérimenté cherchant un emploi à temps plein],
 )
 
 
 /* Layout settings */
-#let cvLanguage = "en"
+#let cvLanguage = "pt"
 
-#let accentColor = "burgundy"
+#let accentColor = "wizardry"
 
 #let profilePhoto = "images/avatar.png" // Leave empty if profil photo is not needed
 

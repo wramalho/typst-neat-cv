@@ -1,28 +1,34 @@
 #import "../../template.typ": *
 
-#cvSection("Formation")
+#cvSection("Formação")
 
 #cvEntry(
-    title: [Master en informatique],
-    organisation: [La même université],
+    title: [Mestre em Sociologia e Antropologia],
+    organisation: [PPGSA/ UFRJ - Universidade Federal do Rio de Janeiro],
     logo: "",
-    date: [2016 - 2018],
-    location: [France],
+    date: [2021 - 2024],
+    location: [Brasil],
     description: list(
-        [#lorem(20)],
+        [Dissertação: "_ALGOCIBERDELIA - sobre estratégias de sobrevivência, grupos de WhatsApp e motoristas de aplicativo_"],
+        [Contribuiu com planejamento e execução de projetos e pesquisas do Laboratório de Estudos Digitais (LED-UFRJ)],
+    
     ),
-    tags: ("Systèmes de bases de données", "Réseaux informatiques", "Cybersécurité")
+    tags: ("Etnografia digital", "Trabalho de aplicativo", "Sociologia e Antropologia da Tecnologia", "Estudos de Plataforma", "Pipeline de dados", "Coleta e análise de dados mistos")
 )
 
 #divider()
 
 #cvEntry(
-    title: [Licence en informatique],
-    organisation: [Une certaine université],
+    title: [Bacharel em Direito],
+    organisation: [Fundação Getulio Vargas],
     logo: "",
-    date: [2014 - 2016],
-    location: [France],
+    date: [2014 - 2019],
+    location: [Brasil],
     description: list(
-        [#lorem(20)],
-    ),
+        [Formação em Matemática Aplicada (420h) na FGV EMap],
+        [TCC: _"O combate às fake news no Brasil: um estudo sobre a checagem de fatos_"],
+        [Bolsista integral],
+        [Por três anos, coordenou equipe de 15 voluntários em publicação trimestral]
+  ),
+  tags: ("Entrevistas", "Direito e Tecnologia", "Desinformação", "Políticas Públicas", "Advocacy", "Governança da Internet")
 )

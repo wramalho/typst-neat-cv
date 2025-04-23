@@ -1,19 +1,27 @@
 #import "template.typ": *
 #show: layout
 
-#cvHeader(align: left, hasPhoto: true)
+#cvHeader(align: left, hasPhoto: false)
 #grid(
-    columns: (60%, 40%),
-    gutter: 16pt,
+  //  columns: (53%, 44%),
+ //  gutter: 15pt,
     stack(
-        spacing: 20pt,
+        spacing: 22pt,
+      
+        linebreak(),
         autoImport("experience"),
         autoImport("education"),
+       
+  //      autoImport("awards"),
     ),
     stack(
-        spacing: 20pt,
+        spacing: 22pt,
+          linebreak(),
+       // autoImport("aboutme"),
         autoImport("skills"),
         autoImport("languages"),
-        autoImport("interests"),
+     //     autoImport("certification"),
+        //autoImport("interests"),
+  //    autoImport("projects-extra"),
     ),
 )

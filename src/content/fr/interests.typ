@@ -1,15 +1,15 @@
 #import "../../template.typ": *
 
-#cvSection("Intérêts personnels")
+#cvSection("Interesses pessoais")
 
 #cvInterestTags(
-    tags: ("Logiciel libre", "Musique", "Lecture", "Sport"),
+    tags: ("Software Livre", "Ensino", "Literatura", "Computadores"),
 )
 
-#divider()
+//#divider()
 
-#cvInterestDescription(
-    description: list(
-        [#lorem(15)]
-    )
-)
+//#cvInterestDescription(
+  //  description: list(
+  //      [#lorem(15)]
+   // )
+//)

@@ -1,23 +1,22 @@
 #import "../../template.typ": *
 
-#cvSection("Langues")
+#cvSection("Idiomas")
 
 #cvLanguage(
-    name: "Anglais",
-    info: "Langue maternelle",
+    name: "Inglês",
+    info: "     Avançado (TOEFL 111/120)",
 )
 
 #cvLanguage(
-    name: "Français",
-    info: "Langue maternelle",
+    name: "Espanhol",
+    info: "     Intermediário (Nível B1)",
 )
 
 #cvLanguage(
-    name: "Allemand",
-    info: "B2, Deutsches Sprachdiplom I",
+    name: "Português",
+    info: "     Nativo",
 )
-
 #cvLanguage(
-    name: "Japonais",
-    info: "B1",
+    name: "Alemão",
+    info: "     Básico (Nível A2)",
 )

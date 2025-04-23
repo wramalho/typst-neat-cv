@@ -4,26 +4,34 @@
 #set page(
     paper: "a4",
     margin: (
-        left: 1.2cm,
-        right: 1.2cm,
-        top: 1.2cm,
-        bottom: 1.2cm,
+        left: 2cm,
+        right: 2cm,
+        top: 2cm,
+        bottom: 2cm,
     ),
 )
 
 #letterHeader(
-    myAddress: [12 Cours Maréchal-Joffre \ 75003 Paris, France],
+    myAddress: [+55 21 983390890 \ Recife (PE), Brasil],
     recipientName: [ABC Company],
     recipientAddress: [32 Rue Michel Ange \ 75011 Paris, France],
     date: [November 1, 2023],
-    subject: "Subject: Job Application for Senior Software Engineer"
+    subject: "Carta de Motivação"
 )
 
 Dear Hiring Manager,
+\
+\
+\
+#lorem(30)
 
-#lorem(200)
+#lorem(30)
 
+
+\
 Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+\
+
 
 Sincerely,
 
