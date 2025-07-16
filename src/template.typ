@@ -31,7 +31,7 @@
     lightGray: rgb("#ededef"),
     mediumGray: rgb("#78787e"),
     darkGray: rgb("#3c3c42"),
-    gold: r),
+    //gold: r),
 )
 
 #let accentColors = (
